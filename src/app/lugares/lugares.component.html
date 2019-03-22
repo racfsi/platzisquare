@@ -1,0 +1,30 @@
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+<div class="containter-fluid">
+  <div class="row justify-content-md-center p-4">
+    <div class="col-md-2">
+      <a routerLink="/crear" class="btn btn-primary">Crear empleado</a>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <ul class="list-group">
+        <ng-container *ngFor="let empleado of empleados; let i = index">
+          <a routerLink="/detalle/{{empleado.id}}">
+            <li *ngIf="empleado.edad >= 22; else notLoggedIn" class="list-group-item" [class.active]="i == 0">
+              <p>Nombre: {{empleado.nombre}} <span>Cargo: </span>{{empleado.cargo}} <span>Edad: </span>{{empleado.edad}}</p>
+            </li>
+          </a>
+          <ng-template #notLoggedIn>
+            <a routerLink="/detalle/{{empleado.id}}">
+              <li class="list-group-item">
+                <p>Nombre: {{empleado.nombre}} <span>Cargo: </span>{{empleado.cargo}} <span>Edad: </span>{{empleado.edad}}</p>
+              </li>
+            </a>
+          </ng-template>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>

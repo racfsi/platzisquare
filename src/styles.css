@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+agm-map {
+    height: 300px;
+}
+/*DETALLES EMPLEADOS*/
+#detallesempleados{
+    padding: 70px 0px;
+}
+/*FORMULARIO DE CONTACTO*/
+textarea{
+    resize: none !important; 
+    width: 100%;
+}

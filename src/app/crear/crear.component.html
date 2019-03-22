@@ -1,0 +1,26 @@
+<section id="detallesempleados">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 p-4">
+        <h3>CREAR EMPLEADO</h3>
+      </div>
+      <div class="col-md-12">
+        <form>
+          <div class="form-group">
+            <label for="nombres">Nombre empleado</label>
+            <input type="text" class="form-control" [(ngModel)]="empleado.nombre" placeholder="Nombre empleado">
+          </div>
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="text" class="form-control" [(ngModel)]="empleado.edad" placeholder="Edad">
+          </div>
+          <div class="form-group">
+            <label for="cargo">Cargo</label>
+            <input type="text" class="form-control" [(ngModel)]="empleado.cargo" placeholder="Cargo">
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="crearEmpleado">Crear</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
