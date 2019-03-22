@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 export class CrearComponent { 
   empleado: any = {};
   crearEmpleado (){
+    alert("sirve");
     console.log(this.empleado);
   }
 } 
